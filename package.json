@@ -1,0 +1,31 @@
+{
+  "name": "socialcard",
+  "version": "1.0.0",
+  "description": "React Practice weekly build",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "React",
+    "Javascript",
+    "ParcelJs"
+  ],
+  "author": "Tony Lee <hy.tony.lee@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@material-ui/core": "^4.3.3",
+    "@material-ui/icons": "^4.2.1",
+    "npm-check-updates": "^3.1.21",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "serialize-to-js": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "parcel-bundler": "^1.12.3"
+  }
+}
