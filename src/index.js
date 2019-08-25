@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import SocialCards from './components/SocialCards';
 
 class SocialCard extends React.Component {
     render() {
         return (
             <div>
-                Hello World!!
+                <SocialCards />
             </div>
         )
     }
