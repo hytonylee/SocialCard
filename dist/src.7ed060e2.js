@@ -43290,7 +43290,127 @@ Object.defineProperty(exports, "default", {
 var _ButtonBase = _interopRequireDefault(require("./ButtonBase"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./ButtonBase":"../node_modules/@material-ui/core/esm/ButtonBase/ButtonBase.js"}],"../node_modules/@material-ui/core/esm/utils/helpers.js":[function(require,module,exports) {
+},{"./ButtonBase":"../node_modules/@material-ui/core/esm/ButtonBase/ButtonBase.js"}],"../node_modules/@material-ui/core/esm/CardActionArea/CardActionArea.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.styles = void 0;
+
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/extends"));
+
+var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/objectWithoutProperties"));
+
+var _react = _interopRequireDefault(require("react"));
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+var _clsx = _interopRequireDefault(require("clsx"));
+
+var _withStyles = _interopRequireDefault(require("../styles/withStyles"));
+
+var _ButtonBase = _interopRequireDefault(require("../ButtonBase"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var styles = function styles(theme) {
+  return {
+    /* Styles applied to the root element. */
+    root: {
+      display: 'block',
+      textAlign: 'inherit',
+      width: '100%',
+      '&:hover $focusHighlight': {
+        opacity: theme.palette.action.hoverOpacity
+      },
+      '&$focusVisible $focusHighlight': {
+        opacity: 0.12
+      }
+    },
+
+    /* Pseudo-class applied to the ButtonBase root element if the action area is keyboard focused. */
+    focusVisible: {},
+
+    /* Styles applied to the overlay that covers the action area when it is keyboard focused. */
+    focusHighlight: {
+      pointerEvents: 'none',
+      position: 'absolute',
+      backgroundColor: 'currentcolor',
+      top: 0,
+      right: 0,
+      bottom: 0,
+      left: 0,
+      opacity: 0,
+      transition: theme.transitions.create('opacity', {
+        duration: theme.transitions.duration.short
+      })
+    }
+  };
+};
+
+exports.styles = styles;
+
+var CardActionArea = _react.default.forwardRef(function CardActionArea(props, ref) {
+  var children = props.children,
+      classes = props.classes,
+      className = props.className,
+      focusVisibleClassName = props.focusVisibleClassName,
+      other = (0, _objectWithoutProperties2.default)(props, ["children", "classes", "className", "focusVisibleClassName"]);
+  return _react.default.createElement(_ButtonBase.default, (0, _extends2.default)({
+    className: (0, _clsx.default)(classes.root, className),
+    focusVisibleClassName: (0, _clsx.default)(focusVisibleClassName, classes.focusVisible),
+    ref: ref
+  }, other), children, _react.default.createElement("span", {
+    className: classes.focusHighlight
+  }));
+});
+
+"development" !== "production" ? CardActionArea.propTypes = {
+  /**
+   * The content of the component.
+   */
+  children: _propTypes.default.node,
+
+  /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css) below for more details.
+   */
+  classes: _propTypes.default.object.isRequired,
+
+  /**
+   * @ignore
+   */
+  className: _propTypes.default.string,
+
+  /**
+   * @ignore
+   */
+  focusVisibleClassName: _propTypes.default.string
+} : void 0;
+
+var _default = (0, _withStyles.default)(styles, {
+  name: 'MuiCardActionArea'
+})(CardActionArea);
+
+exports.default = _default;
+},{"@babel/runtime/helpers/esm/extends":"../node_modules/@material-ui/core/node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutProperties":"../node_modules/@material-ui/core/node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js","react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","clsx":"../node_modules/clsx/dist/clsx.m.js","../styles/withStyles":"../node_modules/@material-ui/core/esm/styles/withStyles.js","../ButtonBase":"../node_modules/@material-ui/core/esm/ButtonBase/index.js"}],"../node_modules/@material-ui/core/esm/CardActionArea/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "default", {
+  enumerable: true,
+  get: function () {
+    return _CardActionArea.default;
+  }
+});
+
+var _CardActionArea = _interopRequireDefault(require("./CardActionArea"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{"./CardActionArea":"../node_modules/@material-ui/core/esm/CardActionArea/CardActionArea.js"}],"../node_modules/@material-ui/core/esm/utils/helpers.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -43896,7 +44016,131 @@ Object.defineProperty(exports, "default", {
 var _CardContent = _interopRequireDefault(require("./CardContent"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./CardContent":"../node_modules/@material-ui/core/esm/CardContent/CardContent.js"}],"../node_modules/@material-ui/core/esm/Typography/Typography.js":[function(require,module,exports) {
+},{"./CardContent":"../node_modules/@material-ui/core/esm/CardContent/CardContent.js"}],"../node_modules/@material-ui/core/esm/CardMedia/CardMedia.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.styles = void 0;
+
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/extends"));
+
+var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/objectWithoutProperties"));
+
+var _react = _interopRequireDefault(require("react"));
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+var _clsx = _interopRequireDefault(require("clsx"));
+
+var _warning = _interopRequireDefault(require("warning"));
+
+var _withStyles = _interopRequireDefault(require("../styles/withStyles"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var styles = {
+  /* Styles applied to the root element. */
+  root: {
+    display: 'block',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center'
+  },
+
+  /* Styles applied to the root element if `component="video, audio, picture, iframe, or img"`. */
+  media: {
+    width: '100%',
+    // ⚠️ object-fit is not supported by IE 11.
+    objectFit: 'cover'
+  }
+};
+exports.styles = styles;
+var MEDIA_COMPONENTS = ['video', 'audio', 'picture', 'iframe', 'img'];
+
+var CardMedia = _react.default.forwardRef(function CardMedia(props, ref) {
+  var classes = props.classes,
+      className = props.className,
+      _props$component = props.component,
+      Component = _props$component === void 0 ? 'div' : _props$component,
+      image = props.image,
+      src = props.src,
+      style = props.style,
+      other = (0, _objectWithoutProperties2.default)(props, ["classes", "className", "component", "image", "src", "style"]);
+  "development" !== "production" ? (0, _warning.default)('children' in other || Boolean(image || src), 'Material-UI: either `children`, `image` or `src` prop must be specified.') : void 0;
+  var isMediaComponent = MEDIA_COMPONENTS.indexOf(Component) !== -1;
+  var composedStyle = !isMediaComponent && image ? (0, _extends2.default)({
+    backgroundImage: "url(\"".concat(image, "\")")
+  }, style) : style;
+  return _react.default.createElement(Component, (0, _extends2.default)({
+    className: (0, _clsx.default)(classes.root, className, isMediaComponent && classes.media),
+    ref: ref,
+    style: composedStyle,
+    src: isMediaComponent ? image || src : undefined
+  }, other));
+});
+
+"development" !== "production" ? CardMedia.propTypes = {
+  /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css) below for more details.
+   */
+  classes: _propTypes.default.object.isRequired,
+
+  /**
+   * @ignore
+   */
+  className: _propTypes.default.string,
+
+  /**
+   * Component for rendering image.
+   * Either a string to use a DOM element or a component.
+   */
+  component: _propTypes.default.elementType,
+
+  /**
+   * Image to be displayed as a background image.
+   * Either `image` or `src` prop must be specified.
+   * Note that caller must specify height otherwise the image will not be visible.
+   */
+  image: _propTypes.default.string,
+
+  /**
+   * An alias for `image` property.
+   * Available only with media components.
+   * Media components: `video`, `audio`, `picture`, `iframe`, `img`.
+   */
+  src: _propTypes.default.string,
+
+  /**
+   * @ignore
+   */
+  style: _propTypes.default.object
+} : void 0;
+
+var _default = (0, _withStyles.default)(styles, {
+  name: 'MuiCardMedia'
+})(CardMedia);
+
+exports.default = _default;
+},{"@babel/runtime/helpers/esm/extends":"../node_modules/@material-ui/core/node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutProperties":"../node_modules/@material-ui/core/node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js","react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","clsx":"../node_modules/clsx/dist/clsx.m.js","warning":"../node_modules/warning/warning.js","../styles/withStyles":"../node_modules/@material-ui/core/esm/styles/withStyles.js"}],"../node_modules/@material-ui/core/esm/CardMedia/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "default", {
+  enumerable: true,
+  get: function () {
+    return _CardMedia.default;
+  }
+});
+
+var _CardMedia = _interopRequireDefault(require("./CardMedia"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{"./CardMedia":"../node_modules/@material-ui/core/esm/CardMedia/CardMedia.js"}],"../node_modules/@material-ui/core/esm/Typography/Typography.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -44184,7 +44428,31 @@ Object.defineProperty(exports, "default", {
 var _Typography = _interopRequireDefault(require("./Typography"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./Typography":"../node_modules/@material-ui/core/esm/Typography/Typography.js"}],"../src/components/SocialCards.js":[function(require,module,exports) {
+},{"./Typography":"../node_modules/@material-ui/core/esm/Typography/Typography.js"}],"../src/components/data/data.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.data = void 0;
+var data = [{
+  id: 1,
+  title: 'Lord of the Flies',
+  author: 'William Golding',
+  desc: 'Golding’s compelling story about a group of very ordinary boys marooned on a coral island is a classic. At first it seems as though it is all going to be great fun; but the fun soon becomes serious and life on the island turns into a nightmare of panic and death. As ordinary standards of behavior collapse, the whole world the boys know collapses with them — the world of cricket and homework and adventure stories — and another world is revealed beneath, primitive and terrible. Published in 1954, the novel has labeled a parable, an allegory, a myth, a morality tale, a parody, a political treatise, even a vision of the apocalypse.'
+}, {
+  id: 2,
+  title: 'Heart of the Darkness',
+  author: 'Joseph Conrad',
+  desc: 'A narrated voyage up the Congo River into the Congo Free State in the so-called Heart of Africa. Charles Marlow, the narrator, tells his story to friends aboard a boat anchored on the River Thames.'
+}, {
+  id: 3,
+  title: 'Slaughterhouse-Five',
+  author: 'Kurt Vonnegut',
+  desc: "It follows his time as an American soldier and chaplain's assistant, to postwar and early years—occasionally traveling through time itself.The text centers around Pilgrim's survival of the Allies' firebombing of Dresden as a prisoner- of - war, an event which Vonnegut himself lived through as a captured serviceman."
+}];
+exports.data = data;
+},{}],"../src/components/SocialCards.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -44198,64 +44466,66 @@ var _styles = require("@material-ui/core/styles");
 
 var _Card = _interopRequireDefault(require("@material-ui/core/Card"));
 
+var _CardActionArea = _interopRequireDefault(require("@material-ui/core/CardActionArea"));
+
 var _CardActions = _interopRequireDefault(require("@material-ui/core/CardActions"));
 
 var _CardContent = _interopRequireDefault(require("@material-ui/core/CardContent"));
 
+var _CardMedia = _interopRequireDefault(require("@material-ui/core/CardMedia"));
+
 var _Button = _interopRequireDefault(require("@material-ui/core/Button"));
 
 var _Typography = _interopRequireDefault(require("@material-ui/core/Typography"));
+
+var _data = require("./data/data");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var useStyles = (0, _styles.makeStyles)({
   card: {
     minWidth: '334px',
-    maxWidth: 500
+    maxWidth: 500,
+    marginBottom: '10px'
   },
   bullet: {
     display: 'inline-block',
     margin: '0 2px',
     transform: 'scale(0.8)'
   },
-  title: {
+  author: {
     fontSize: 14
-  },
-  pos: {
-    marginBottom: 12
   }
 });
 
 var SocialCards = function SocialCards() {
   var classes = useStyles();
 
-  var bull = _react.default.createElement("span", {
-    className: classes.bullet
-  }, "\u2022");
+  var cards = _data.data.map(function (data) {
+    return _react.default.createElement(_Card.default, {
+      className: classes.card,
+      keys: data.id
+    }, _react.default.createElement(_CardContent.default, null, _react.default.createElement(_Typography.default, {
+      className: classes.author,
+      color: "textSecondary",
+      gutterBottom: true
+    }, data.author), _react.default.createElement(_Typography.default, {
+      variant: "h5",
+      component: "h2"
+    }, data.title), _react.default.createElement(_Typography.default, {
+      variant: "body2",
+      component: "p"
+    }, data.desc)), _react.default.createElement(_CardActions.default, null, _react.default.createElement(_Button.default, {
+      size: "small"
+    }, "Learn More")));
+  });
 
-  return _react.default.createElement(_Card.default, {
-    className: classes.card
-  }, _react.default.createElement(_CardContent.default, null, _react.default.createElement(_Typography.default, {
-    className: classes.title,
-    color: "textSecondary",
-    gutterBottom: true
-  }, "Word of the Day"), _react.default.createElement(_Typography.default, {
-    variant: "h5",
-    component: "h2"
-  }, "be", bull, "nev", bull, "o", bull, "lent"), _react.default.createElement(_Typography.default, {
-    className: classes.pos,
-    color: "textSecondary"
-  }, "adjective"), _react.default.createElement(_Typography.default, {
-    variant: "body2",
-    component: "p"
-  }, "well meaning and kindly.", _react.default.createElement("br", null), '"a benevolent smile"')), _react.default.createElement(_CardActions.default, null, _react.default.createElement(_Button.default, {
-    size: "small"
-  }, "Learn More")));
+  return _react.default.createElement("div", null, cards);
 };
 
 var _default = SocialCards;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","@material-ui/core/styles":"../node_modules/@material-ui/core/esm/styles/index.js","@material-ui/core/Card":"../node_modules/@material-ui/core/esm/Card/index.js","@material-ui/core/CardActions":"../node_modules/@material-ui/core/esm/CardActions/index.js","@material-ui/core/CardContent":"../node_modules/@material-ui/core/esm/CardContent/index.js","@material-ui/core/Button":"../node_modules/@material-ui/core/esm/Button/index.js","@material-ui/core/Typography":"../node_modules/@material-ui/core/esm/Typography/index.js"}],"../node_modules/@material-ui/system/node_modules/@babel/runtime/helpers/esm/defineProperty.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","@material-ui/core/styles":"../node_modules/@material-ui/core/esm/styles/index.js","@material-ui/core/Card":"../node_modules/@material-ui/core/esm/Card/index.js","@material-ui/core/CardActionArea":"../node_modules/@material-ui/core/esm/CardActionArea/index.js","@material-ui/core/CardActions":"../node_modules/@material-ui/core/esm/CardActions/index.js","@material-ui/core/CardContent":"../node_modules/@material-ui/core/esm/CardContent/index.js","@material-ui/core/CardMedia":"../node_modules/@material-ui/core/esm/CardMedia/index.js","@material-ui/core/Button":"../node_modules/@material-ui/core/esm/Button/index.js","@material-ui/core/Typography":"../node_modules/@material-ui/core/esm/Typography/index.js","./data/data":"../src/components/data/data.js"}],"../node_modules/@material-ui/system/node_modules/@babel/runtime/helpers/esm/defineProperty.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

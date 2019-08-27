@@ -12,12 +12,13 @@ html {
 .AppTitle {
     font-weight: 400;
     margin-bottom: 0 !important;
+    width: 480px;
 }
 
 .CardContainer {
     display: flex;
     flex-direction: column;
-    align-items: center;   
+    align-items: center;  
 }
 
 /*# sourceMappingURL=/styls.89cf8a04.css.map */
