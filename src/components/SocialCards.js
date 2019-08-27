@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
     card: {
-        minWidth: 275,
+        minWidth: '334px',
         maxWidth: 500,
     },
     bullet: {
@@ -33,17 +33,17 @@ const SocialCards = () => {
             <CardContent>
                 <Typography className={classes.title} color="textSecondary" gutterBottom>
                     Word of the Day
-        </Typography>
+                </Typography>
                 <Typography variant="h5" component="h2">
                     be
-          {bull}
+                    {bull}
                     nev
-          {bull}o{bull}
+                    {bull}o{bull}
                     lent
-        </Typography>
+                    </Typography>
                 <Typography className={classes.pos} color="textSecondary">
                     adjective
-        </Typography>
+                </Typography>
                 <Typography variant="body2" component="p">
                     well meaning and kindly.
           <br />

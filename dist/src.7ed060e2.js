@@ -44210,7 +44210,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var useStyles = (0, _styles.makeStyles)({
   card: {
-    minWidth: 275,
+    minWidth: '334px',
     maxWidth: 500
   },
   bullet: {
@@ -44255,7 +44255,1327 @@ var SocialCards = function SocialCards() {
 
 var _default = SocialCards;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","@material-ui/core/styles":"../node_modules/@material-ui/core/esm/styles/index.js","@material-ui/core/Card":"../node_modules/@material-ui/core/esm/Card/index.js","@material-ui/core/CardActions":"../node_modules/@material-ui/core/esm/CardActions/index.js","@material-ui/core/CardContent":"../node_modules/@material-ui/core/esm/CardContent/index.js","@material-ui/core/Button":"../node_modules/@material-ui/core/esm/Button/index.js","@material-ui/core/Typography":"../node_modules/@material-ui/core/esm/Typography/index.js"}],"../src/index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","@material-ui/core/styles":"../node_modules/@material-ui/core/esm/styles/index.js","@material-ui/core/Card":"../node_modules/@material-ui/core/esm/Card/index.js","@material-ui/core/CardActions":"../node_modules/@material-ui/core/esm/CardActions/index.js","@material-ui/core/CardContent":"../node_modules/@material-ui/core/esm/CardContent/index.js","@material-ui/core/Button":"../node_modules/@material-ui/core/esm/Button/index.js","@material-ui/core/Typography":"../node_modules/@material-ui/core/esm/Typography/index.js"}],"../node_modules/@material-ui/system/node_modules/@babel/runtime/helpers/esm/defineProperty.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = _defineProperty;
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+},{}],"../node_modules/@material-ui/system/esm/responsivePropType.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var responsivePropType = "development" !== 'production' ? _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string, _propTypes.default.object, _propTypes.default.array]) : {};
+var _default = responsivePropType;
+exports.default = _default;
+},{"prop-types":"../node_modules/prop-types/index.js"}],"../node_modules/@material-ui/system/node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = _arrayWithoutHoles;
+
+function _arrayWithoutHoles(arr) {
+  if (Array.isArray(arr)) {
+    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
+      arr2[i] = arr[i];
+    }
+
+    return arr2;
+  }
+}
+},{}],"../node_modules/@material-ui/system/node_modules/@babel/runtime/helpers/esm/iterableToArray.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = _iterableToArray;
+
+function _iterableToArray(iter) {
+  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
+}
+},{}],"../node_modules/@material-ui/system/node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = _nonIterableSpread;
+
+function _nonIterableSpread() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance");
+}
+},{}],"../node_modules/@material-ui/system/node_modules/@babel/runtime/helpers/esm/toConsumableArray.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = _toConsumableArray;
+
+var _arrayWithoutHoles = _interopRequireDefault(require("./arrayWithoutHoles"));
+
+var _iterableToArray = _interopRequireDefault(require("./iterableToArray"));
+
+var _nonIterableSpread = _interopRequireDefault(require("./nonIterableSpread"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _toConsumableArray(arr) {
+  return (0, _arrayWithoutHoles.default)(arr) || (0, _iterableToArray.default)(arr) || (0, _nonIterableSpread.default)();
+}
+},{"./arrayWithoutHoles":"../node_modules/@material-ui/system/node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js","./iterableToArray":"../node_modules/@material-ui/system/node_modules/@babel/runtime/helpers/esm/iterableToArray.js","./nonIterableSpread":"../node_modules/@material-ui/system/node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js"}],"../node_modules/@material-ui/system/node_modules/@babel/runtime/helpers/esm/extends.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = _extends;
+
+function _extends() {
+  exports.default = _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+},{}],"../node_modules/@material-ui/system/node_modules/@babel/runtime/helpers/esm/typeof.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = _typeof;
+
+function _typeof2(obj) {
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    _typeof2 = function _typeof2(obj) {
+      return typeof obj;
+    };
+  } else {
+    _typeof2 = function _typeof2(obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+  }
+
+  return _typeof2(obj);
+}
+
+function _typeof(obj) {
+  if (typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol") {
+    exports.default = _typeof = function _typeof(obj) {
+      return _typeof2(obj);
+    };
+  } else {
+    exports.default = _typeof = function _typeof(obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : _typeof2(obj);
+    };
+  }
+
+  return _typeof(obj);
+}
+},{}],"../node_modules/@material-ui/system/esm/merge.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _deepmerge = _interopRequireDefault(require("deepmerge"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// < 1kb payload overhead when lodash/merge is > 3kb.
+function merge(acc, item) {
+  if (!item) {
+    return acc;
+  }
+
+  return (0, _deepmerge.default)(acc, item, {
+    clone: false // No need to clone deep, it's way faster.
+
+  });
+}
+
+var _default = merge;
+exports.default = _default;
+},{"deepmerge":"../node_modules/deepmerge/dist/cjs.js"}],"../node_modules/@material-ui/system/esm/breakpoints.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.handleBreakpoints = handleBreakpoints;
+exports.default = void 0;
+
+var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/toConsumableArray"));
+
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/extends"));
+
+var _typeof2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/typeof"));
+
+var _warning = _interopRequireDefault(require("warning"));
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+var _merge = _interopRequireDefault(require("./merge"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// The breakpoint **start** at this value.
+// For instance with the first breakpoint xs: [xs, sm[.
+var values = {
+  xs: 0,
+  sm: 600,
+  md: 960,
+  lg: 1280,
+  xl: 1920
+};
+var defaultBreakpoints = {
+  // Sorted ASC by size. That's important.
+  // It can't be configured as it's used statically for propTypes.
+  keys: ['xs', 'sm', 'md', 'lg', 'xl'],
+  up: function up(key) {
+    return "@media (min-width:".concat(values[key], "px)");
+  }
+};
+
+function handleBreakpoints(props, propValue, styleFromPropValue) {
+  "development" !== "production" ? (0, _warning.default)(props.theme, '@material-ui/system: you are calling a style function without a theme value.') : void 0;
+
+  if (Array.isArray(propValue)) {
+    var themeBreakpoints = props.theme.breakpoints || defaultBreakpoints;
+    return propValue.reduce(function (acc, item, index) {
+      acc[themeBreakpoints.up(themeBreakpoints.keys[index])] = styleFromPropValue(propValue[index]);
+      return acc;
+    }, {});
+  }
+
+  if ((0, _typeof2.default)(propValue) === 'object') {
+    var _themeBreakpoints = props.theme.breakpoints || defaultBreakpoints;
+
+    return Object.keys(propValue).reduce(function (acc, breakpoint) {
+      acc[_themeBreakpoints.up(breakpoint)] = styleFromPropValue(propValue[breakpoint]);
+      return acc;
+    }, {});
+  }
+
+  var output = styleFromPropValue(propValue);
+  return output;
+}
+
+function breakpoints(styleFunction) {
+  var newStyleFunction = function newStyleFunction(props) {
+    var base = styleFunction(props);
+    var themeBreakpoints = props.theme.breakpoints || defaultBreakpoints;
+    var extended = themeBreakpoints.keys.reduce(function (acc, key) {
+      if (props[key]) {
+        acc = acc || {};
+        acc[themeBreakpoints.up(key)] = styleFunction((0, _extends2.default)({
+          theme: props.theme
+        }, props[key]));
+      }
+
+      return acc;
+    }, null);
+    return (0, _merge.default)(base, extended);
+  };
+
+  newStyleFunction.propTypes = "development" !== 'production' ? (0, _extends2.default)({}, styleFunction.propTypes, {
+    xs: _propTypes.default.object,
+    sm: _propTypes.default.object,
+    md: _propTypes.default.object,
+    lg: _propTypes.default.object,
+    xl: _propTypes.default.object
+  }) : {};
+  newStyleFunction.filterProps = ['xs', 'sm', 'md', 'lg', 'xl'].concat((0, _toConsumableArray2.default)(styleFunction.filterProps));
+  return newStyleFunction;
+}
+
+var _default = breakpoints;
+exports.default = _default;
+},{"@babel/runtime/helpers/esm/toConsumableArray":"../node_modules/@material-ui/system/node_modules/@babel/runtime/helpers/esm/toConsumableArray.js","@babel/runtime/helpers/esm/extends":"../node_modules/@material-ui/system/node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/typeof":"../node_modules/@material-ui/system/node_modules/@babel/runtime/helpers/esm/typeof.js","warning":"../node_modules/warning/warning.js","prop-types":"../node_modules/prop-types/index.js","./merge":"../node_modules/@material-ui/system/esm/merge.js"}],"../node_modules/@material-ui/system/esm/style.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/defineProperty"));
+
+var _responsivePropType = _interopRequireDefault(require("./responsivePropType"));
+
+var _breakpoints = require("./breakpoints");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function getPath(obj, path) {
+  if (!path || typeof path !== 'string') {
+    return null;
+  }
+
+  return path.split('.').reduce(function (acc, item) {
+    return acc && acc[item] ? acc[item] : null;
+  }, obj);
+}
+
+function style(options) {
+  var prop = options.prop,
+      _options$cssProperty = options.cssProperty,
+      cssProperty = _options$cssProperty === void 0 ? options.prop : _options$cssProperty,
+      themeKey = options.themeKey,
+      transform = options.transform;
+
+  var fn = function fn(props) {
+    if (props[prop] == null) {
+      return null;
+    }
+
+    var propValue = props[prop];
+    var theme = props.theme;
+    var themeMapping = getPath(theme, themeKey) || {};
+
+    var styleFromPropValue = function styleFromPropValue(propValueFinal) {
+      var value;
+
+      if (typeof themeMapping === 'function') {
+        value = themeMapping(propValueFinal);
+      } else if (Array.isArray(themeMapping)) {
+        value = themeMapping[propValueFinal];
+      } else {
+        value = getPath(themeMapping, propValueFinal) || propValueFinal;
+
+        if (transform) {
+          value = transform(value);
+        }
+      }
+
+      if (cssProperty === false) {
+        return value;
+      }
+
+      return (0, _defineProperty2.default)({}, cssProperty, value);
+    };
+
+    return (0, _breakpoints.handleBreakpoints)(props, propValue, styleFromPropValue);
+  };
+
+  fn.propTypes = "development" !== 'production' ? (0, _defineProperty2.default)({}, prop, _responsivePropType.default) : {};
+  fn.filterProps = [prop];
+  return fn;
+}
+
+var _default = style;
+exports.default = _default;
+},{"@babel/runtime/helpers/esm/defineProperty":"../node_modules/@material-ui/system/node_modules/@babel/runtime/helpers/esm/defineProperty.js","./responsivePropType":"../node_modules/@material-ui/system/esm/responsivePropType.js","./breakpoints":"../node_modules/@material-ui/system/esm/breakpoints.js"}],"../node_modules/@material-ui/system/esm/compose.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/extends"));
+
+var _merge = _interopRequireDefault(require("./merge"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function compose() {
+  for (var _len = arguments.length, styles = new Array(_len), _key = 0; _key < _len; _key++) {
+    styles[_key] = arguments[_key];
+  }
+
+  var fn = function fn(props) {
+    return styles.reduce(function (acc, style) {
+      var output = style(props);
+
+      if (output) {
+        return (0, _merge.default)(acc, output);
+      }
+
+      return acc;
+    }, {});
+  }; // Alternative approach that doesn't yield any performance gain.
+  // const handlers = styles.reduce((acc, style) => {
+  //   style.filterProps.forEach(prop => {
+  //     acc[prop] = style;
+  //   });
+  //   return acc;
+  // }, {});
+  // const fn = props => {
+  //   return Object.keys(props).reduce((acc, prop) => {
+  //     if (handlers[prop]) {
+  //       return merge(acc, handlers[prop](props));
+  //     }
+  //     return acc;
+  //   }, {});
+  // };
+
+
+  fn.propTypes = "development" !== 'production' ? styles.reduce(function (acc, style) {
+    return (0, _extends2.default)(acc, style.propTypes);
+  }, {}) : {};
+  fn.filterProps = styles.reduce(function (acc, style) {
+    return acc.concat(style.filterProps);
+  }, []);
+  return fn;
+}
+
+var _default = compose;
+exports.default = _default;
+},{"@babel/runtime/helpers/esm/extends":"../node_modules/@material-ui/system/node_modules/@babel/runtime/helpers/esm/extends.js","./merge":"../node_modules/@material-ui/system/esm/merge.js"}],"../node_modules/@material-ui/system/esm/borders.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.borderRadius = exports.borderColor = exports.borderLeft = exports.borderBottom = exports.borderRight = exports.borderTop = exports.border = void 0;
+
+var _style = _interopRequireDefault(require("./style"));
+
+var _compose = _interopRequireDefault(require("./compose"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function getBorder(value) {
+  if (typeof value !== 'number') {
+    return value;
+  }
+
+  return "".concat(value, "px solid");
+}
+
+var border = (0, _style.default)({
+  prop: 'border',
+  themeKey: 'borders',
+  transform: getBorder
+});
+exports.border = border;
+var borderTop = (0, _style.default)({
+  prop: 'borderTop',
+  themeKey: 'borders',
+  transform: getBorder
+});
+exports.borderTop = borderTop;
+var borderRight = (0, _style.default)({
+  prop: 'borderRight',
+  themeKey: 'borders',
+  transform: getBorder
+});
+exports.borderRight = borderRight;
+var borderBottom = (0, _style.default)({
+  prop: 'borderBottom',
+  themeKey: 'borders',
+  transform: getBorder
+});
+exports.borderBottom = borderBottom;
+var borderLeft = (0, _style.default)({
+  prop: 'borderLeft',
+  themeKey: 'borders',
+  transform: getBorder
+});
+exports.borderLeft = borderLeft;
+var borderColor = (0, _style.default)({
+  prop: 'borderColor',
+  themeKey: 'palette'
+});
+exports.borderColor = borderColor;
+var borderRadius = (0, _style.default)({
+  prop: 'borderRadius',
+  themeKey: 'shape'
+});
+exports.borderRadius = borderRadius;
+var borders = (0, _compose.default)(border, borderTop, borderRight, borderBottom, borderLeft, borderColor, borderRadius);
+var _default = borders;
+exports.default = _default;
+},{"./style":"../node_modules/@material-ui/system/esm/style.js","./compose":"../node_modules/@material-ui/system/esm/compose.js"}],"../node_modules/@material-ui/system/esm/css.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/toConsumableArray"));
+
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/extends"));
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+var _merge = _interopRequireDefault(require("./merge"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function omit(input, fields) {
+  var output = {};
+  Object.keys(input).forEach(function (prop) {
+    if (fields.indexOf(prop) === -1) {
+      output[prop] = input[prop];
+    }
+  });
+  return output;
+}
+
+function css(styleFunction) {
+  var newStyleFunction = function newStyleFunction(props) {
+    var output = styleFunction(props);
+
+    if (props.css) {
+      return (0, _extends2.default)({}, (0, _merge.default)(output, styleFunction((0, _extends2.default)({
+        theme: props.theme
+      }, props.css))), {}, omit(props.css, [styleFunction.filterProps]));
+    }
+
+    return output;
+  };
+
+  newStyleFunction.propTypes = "development" !== 'production' ? (0, _extends2.default)({}, styleFunction.propTypes, {
+    css: _propTypes.default.object
+  }) : {};
+  newStyleFunction.filterProps = ['css'].concat((0, _toConsumableArray2.default)(styleFunction.filterProps));
+  return newStyleFunction;
+}
+
+var _default = css;
+exports.default = _default;
+},{"@babel/runtime/helpers/esm/toConsumableArray":"../node_modules/@material-ui/system/node_modules/@babel/runtime/helpers/esm/toConsumableArray.js","@babel/runtime/helpers/esm/extends":"../node_modules/@material-ui/system/node_modules/@babel/runtime/helpers/esm/extends.js","prop-types":"../node_modules/prop-types/index.js","./merge":"../node_modules/@material-ui/system/esm/merge.js"}],"../node_modules/@material-ui/system/esm/display.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.whiteSpace = exports.visibility = exports.textOverflow = exports.overflow = exports.displayRaw = exports.displayPrint = void 0;
+
+var _style = _interopRequireDefault(require("./style"));
+
+var _compose = _interopRequireDefault(require("./compose"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var displayPrint = (0, _style.default)({
+  prop: 'displayPrint',
+  cssProperty: false,
+  transform: function transform(value) {
+    return {
+      '@media print': {
+        display: value
+      }
+    };
+  }
+});
+exports.displayPrint = displayPrint;
+var displayRaw = (0, _style.default)({
+  prop: 'display'
+});
+exports.displayRaw = displayRaw;
+var overflow = (0, _style.default)({
+  prop: 'overflow'
+});
+exports.overflow = overflow;
+var textOverflow = (0, _style.default)({
+  prop: 'textOverflow'
+});
+exports.textOverflow = textOverflow;
+var visibility = (0, _style.default)({
+  prop: 'visibility'
+});
+exports.visibility = visibility;
+var whiteSpace = (0, _style.default)({
+  prop: 'whiteSpace'
+});
+exports.whiteSpace = whiteSpace;
+
+var _default = (0, _compose.default)(displayPrint, displayRaw, overflow, textOverflow, visibility, whiteSpace);
+
+exports.default = _default;
+},{"./style":"../node_modules/@material-ui/system/esm/style.js","./compose":"../node_modules/@material-ui/system/esm/compose.js"}],"../node_modules/@material-ui/system/esm/flexbox.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.justifySelf = exports.justifyItems = exports.alignSelf = exports.flexShrink = exports.flexGrow = exports.flex = exports.order = exports.alignContent = exports.alignItems = exports.justifyContent = exports.flexWrap = exports.flexDirection = exports.flexBasis = void 0;
+
+var _style = _interopRequireDefault(require("./style"));
+
+var _compose = _interopRequireDefault(require("./compose"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var flexBasis = (0, _style.default)({
+  prop: 'flexBasis'
+});
+exports.flexBasis = flexBasis;
+var flexDirection = (0, _style.default)({
+  prop: 'flexDirection'
+});
+exports.flexDirection = flexDirection;
+var flexWrap = (0, _style.default)({
+  prop: 'flexWrap'
+});
+exports.flexWrap = flexWrap;
+var justifyContent = (0, _style.default)({
+  prop: 'justifyContent'
+});
+exports.justifyContent = justifyContent;
+var alignItems = (0, _style.default)({
+  prop: 'alignItems'
+});
+exports.alignItems = alignItems;
+var alignContent = (0, _style.default)({
+  prop: 'alignContent'
+});
+exports.alignContent = alignContent;
+var order = (0, _style.default)({
+  prop: 'order'
+});
+exports.order = order;
+var flex = (0, _style.default)({
+  prop: 'flex'
+});
+exports.flex = flex;
+var flexGrow = (0, _style.default)({
+  prop: 'flexGrow'
+});
+exports.flexGrow = flexGrow;
+var flexShrink = (0, _style.default)({
+  prop: 'flexShrink'
+});
+exports.flexShrink = flexShrink;
+var alignSelf = (0, _style.default)({
+  prop: 'alignSelf'
+});
+exports.alignSelf = alignSelf;
+var justifyItems = (0, _style.default)({
+  prop: 'justifyItems'
+});
+exports.justifyItems = justifyItems;
+var justifySelf = (0, _style.default)({
+  prop: 'justifySelf'
+});
+exports.justifySelf = justifySelf;
+var flexbox = (0, _compose.default)(flexBasis, flexDirection, flexWrap, justifyContent, alignItems, alignContent, order, flex, flexGrow, flexShrink, alignSelf, justifyItems, justifySelf);
+var _default = flexbox;
+exports.default = _default;
+},{"./style":"../node_modules/@material-ui/system/esm/style.js","./compose":"../node_modules/@material-ui/system/esm/compose.js"}],"../node_modules/@material-ui/system/esm/palette.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.bgcolor = exports.color = void 0;
+
+var _style = _interopRequireDefault(require("./style"));
+
+var _compose = _interopRequireDefault(require("./compose"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var color = (0, _style.default)({
+  prop: 'color',
+  themeKey: 'palette'
+});
+exports.color = color;
+var bgcolor = (0, _style.default)({
+  prop: 'bgcolor',
+  cssProperty: 'backgroundColor',
+  themeKey: 'palette'
+});
+exports.bgcolor = bgcolor;
+var palette = (0, _compose.default)(color, bgcolor);
+var _default = palette;
+exports.default = _default;
+},{"./style":"../node_modules/@material-ui/system/esm/style.js","./compose":"../node_modules/@material-ui/system/esm/compose.js"}],"../node_modules/@material-ui/system/esm/positions.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.left = exports.bottom = exports.right = exports.top = exports.zIndex = exports.position = void 0;
+
+var _style = _interopRequireDefault(require("./style"));
+
+var _compose = _interopRequireDefault(require("./compose"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var position = (0, _style.default)({
+  prop: 'position'
+});
+exports.position = position;
+var zIndex = (0, _style.default)({
+  prop: 'zIndex',
+  themeKey: 'zIndex'
+});
+exports.zIndex = zIndex;
+var top = (0, _style.default)({
+  prop: 'top'
+});
+exports.top = top;
+var right = (0, _style.default)({
+  prop: 'right'
+});
+exports.right = right;
+var bottom = (0, _style.default)({
+  prop: 'bottom'
+});
+exports.bottom = bottom;
+var left = (0, _style.default)({
+  prop: 'left'
+});
+exports.left = left;
+
+var _default = (0, _compose.default)(position, zIndex, top, right, bottom, left);
+
+exports.default = _default;
+},{"./style":"../node_modules/@material-ui/system/esm/style.js","./compose":"../node_modules/@material-ui/system/esm/compose.js"}],"../node_modules/@material-ui/system/esm/shadows.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _style = _interopRequireDefault(require("./style"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var boxShadow = (0, _style.default)({
+  prop: 'boxShadow',
+  themeKey: 'shadows'
+});
+var _default = boxShadow;
+exports.default = _default;
+},{"./style":"../node_modules/@material-ui/system/esm/style.js"}],"../node_modules/@material-ui/system/esm/sizing.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.sizeHeight = exports.sizeWidth = exports.minHeight = exports.maxHeight = exports.height = exports.minWidth = exports.maxWidth = exports.width = void 0;
+
+var _style = _interopRequireDefault(require("./style"));
+
+var _compose = _interopRequireDefault(require("./compose"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function transform(value) {
+  return value <= 1 ? "".concat(value * 100, "%") : value;
+}
+
+var width = (0, _style.default)({
+  prop: 'width',
+  transform: transform
+});
+exports.width = width;
+var maxWidth = (0, _style.default)({
+  prop: 'maxWidth',
+  transform: transform
+});
+exports.maxWidth = maxWidth;
+var minWidth = (0, _style.default)({
+  prop: 'minWidth',
+  transform: transform
+});
+exports.minWidth = minWidth;
+var height = (0, _style.default)({
+  prop: 'height',
+  transform: transform
+});
+exports.height = height;
+var maxHeight = (0, _style.default)({
+  prop: 'maxHeight',
+  transform: transform
+});
+exports.maxHeight = maxHeight;
+var minHeight = (0, _style.default)({
+  prop: 'minHeight',
+  transform: transform
+});
+exports.minHeight = minHeight;
+var sizeWidth = (0, _style.default)({
+  prop: 'size',
+  cssProperty: 'width',
+  transform: transform
+});
+exports.sizeWidth = sizeWidth;
+var sizeHeight = (0, _style.default)({
+  prop: 'size',
+  cssProperty: 'height',
+  transform: transform
+});
+exports.sizeHeight = sizeHeight;
+var sizing = (0, _compose.default)(width, maxWidth, minWidth, height, maxHeight, minHeight);
+var _default = sizing;
+exports.default = _default;
+},{"./style":"../node_modules/@material-ui/system/esm/style.js","./compose":"../node_modules/@material-ui/system/esm/compose.js"}],"../node_modules/@material-ui/system/node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = _arrayWithHoles;
+
+function _arrayWithHoles(arr) {
+  if (Array.isArray(arr)) return arr;
+}
+},{}],"../node_modules/@material-ui/system/node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = _iterableToArrayLimit;
+
+function _iterableToArrayLimit(arr, i) {
+  var _arr = [];
+  var _n = true;
+  var _d = false;
+  var _e = undefined;
+
+  try {
+    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+      _arr.push(_s.value);
+
+      if (i && _arr.length === i) break;
+    }
+  } catch (err) {
+    _d = true;
+    _e = err;
+  } finally {
+    try {
+      if (!_n && _i["return"] != null) _i["return"]();
+    } finally {
+      if (_d) throw _e;
+    }
+  }
+
+  return _arr;
+}
+},{}],"../node_modules/@material-ui/system/node_modules/@babel/runtime/helpers/esm/nonIterableRest.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = _nonIterableRest;
+
+function _nonIterableRest() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance");
+}
+},{}],"../node_modules/@material-ui/system/node_modules/@babel/runtime/helpers/esm/slicedToArray.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = _slicedToArray;
+
+var _arrayWithHoles = _interopRequireDefault(require("./arrayWithHoles"));
+
+var _iterableToArrayLimit = _interopRequireDefault(require("./iterableToArrayLimit"));
+
+var _nonIterableRest = _interopRequireDefault(require("./nonIterableRest"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _slicedToArray(arr, i) {
+  return (0, _arrayWithHoles.default)(arr) || (0, _iterableToArrayLimit.default)(arr, i) || (0, _nonIterableRest.default)();
+}
+},{"./arrayWithHoles":"../node_modules/@material-ui/system/node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js","./iterableToArrayLimit":"../node_modules/@material-ui/system/node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js","./nonIterableRest":"../node_modules/@material-ui/system/node_modules/@babel/runtime/helpers/esm/nonIterableRest.js"}],"../node_modules/@material-ui/system/esm/memoize.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = memoize;
+
+function memoize(fn) {
+  var cache = {};
+  return function (arg) {
+    if (cache[arg] === undefined) {
+      cache[arg] = fn(arg);
+    }
+
+    return cache[arg];
+  };
+}
+},{}],"../node_modules/@material-ui/system/esm/spacing.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/slicedToArray"));
+
+var _warning = _interopRequireDefault(require("warning"));
+
+var _responsivePropType = _interopRequireDefault(require("./responsivePropType"));
+
+var _breakpoints = require("./breakpoints");
+
+var _merge = _interopRequireDefault(require("./merge"));
+
+var _memoize = _interopRequireDefault(require("./memoize"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var properties = {
+  m: 'margin',
+  p: 'padding'
+};
+var directions = {
+  t: 'Top',
+  r: 'Right',
+  b: 'Bottom',
+  l: 'Left',
+  x: ['Left', 'Right'],
+  y: ['Top', 'Bottom']
+};
+var aliases = {
+  marginX: 'mx',
+  marginY: 'my',
+  paddingX: 'px',
+  paddingY: 'py'
+}; // memoize() impact:
+// From 300,000 ops/sec
+// To 350,000 ops/sec
+
+var getCssProperties = (0, _memoize.default)(function (prop) {
+  // It's not a shorthand notation.
+  if (prop.length > 2) {
+    if (aliases[prop]) {
+      prop = aliases[prop];
+    } else {
+      return [prop];
+    }
+  }
+
+  var _prop$split = prop.split(''),
+      _prop$split2 = (0, _slicedToArray2.default)(_prop$split, 2),
+      a = _prop$split2[0],
+      b = _prop$split2[1];
+
+  var property = properties[a];
+  var direction = directions[b] || '';
+  return Array.isArray(direction) ? direction.map(function (dir) {
+    return property + dir;
+  }) : [property + direction];
+});
+var spacingKeys = ['m', 'mt', 'mr', 'mb', 'ml', 'mx', 'my', 'p', 'pt', 'pr', 'pb', 'pl', 'px', 'py', 'margin', 'marginTop', 'marginRight', 'marginBottom', 'marginLeft', 'marginX', 'marginY', 'padding', 'paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft', 'paddingX', 'paddingY'];
+
+function getTransformer(theme) {
+  var themeSpacing = theme.spacing || 8;
+
+  if (typeof themeSpacing === 'number') {
+    return function (abs) {
+      return themeSpacing * abs;
+    };
+  }
+
+  if (Array.isArray(themeSpacing)) {
+    return function (abs) {
+      "development" !== "production" ? (0, _warning.default)(abs <= themeSpacing.length - 1, ["@material-ui/system: the value provided (".concat(abs, ") overflows."), "The supported values are: ".concat(JSON.stringify(themeSpacing), "."), "".concat(abs, " > ").concat(themeSpacing.length - 1, ", you need to add the missing values.")].join('\n')) : void 0;
+      return themeSpacing[abs];
+    };
+  }
+
+  if (typeof themeSpacing === 'function') {
+    return themeSpacing;
+  }
+
+  "development" !== "production" ? (0, _warning.default)(false, ["@material-ui/system: the `theme.spacing` value (".concat(themeSpacing, ") is invalid."), 'It should be a number, an array or a function.'].join('\n')) : void 0;
+  return function () {
+    return undefined;
+  };
+}
+
+function getValue(transformer, propValue) {
+  if (typeof propValue === 'string') {
+    return propValue;
+  }
+
+  var abs = Math.abs(propValue);
+  var transformed = transformer(abs);
+
+  if (propValue >= 0) {
+    return transformed;
+  }
+
+  if (typeof transformed === 'number') {
+    return -transformed;
+  }
+
+  return "-".concat(transformed);
+}
+
+function getStyleFromPropValue(cssProperties, transformer) {
+  return function (propValue) {
+    return cssProperties.reduce(function (acc, cssProperty) {
+      acc[cssProperty] = getValue(transformer, propValue);
+      return acc;
+    }, {});
+  };
+}
+
+function spacing(props) {
+  var theme = props.theme;
+  var transformer = getTransformer(theme);
+  return Object.keys(props).map(function (prop) {
+    // Using a hash computation over an array iteration could be faster, but with only 28 items,
+    // it's doesn't worth the bundle size.
+    if (spacingKeys.indexOf(prop) === -1) {
+      return null;
+    }
+
+    var cssProperties = getCssProperties(prop);
+    var styleFromPropValue = getStyleFromPropValue(cssProperties, transformer);
+    var propValue = props[prop];
+    return (0, _breakpoints.handleBreakpoints)(props, propValue, styleFromPropValue);
+  }).reduce(_merge.default, {});
+}
+
+spacing.propTypes = "development" !== 'production' ? spacingKeys.reduce(function (obj, key) {
+  obj[key] = _responsivePropType.default;
+  return obj;
+}, {}) : {};
+spacing.filterProps = spacingKeys;
+var _default = spacing;
+exports.default = _default;
+},{"@babel/runtime/helpers/esm/slicedToArray":"../node_modules/@material-ui/system/node_modules/@babel/runtime/helpers/esm/slicedToArray.js","warning":"../node_modules/warning/warning.js","./responsivePropType":"../node_modules/@material-ui/system/esm/responsivePropType.js","./breakpoints":"../node_modules/@material-ui/system/esm/breakpoints.js","./merge":"../node_modules/@material-ui/system/esm/merge.js","./memoize":"../node_modules/@material-ui/system/esm/memoize.js"}],"../node_modules/@material-ui/system/esm/typography.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.textAlign = exports.lineHeight = exports.letterSpacing = exports.fontWeight = exports.fontStyle = exports.fontSize = exports.fontFamily = void 0;
+
+var _style = _interopRequireDefault(require("./style"));
+
+var _compose = _interopRequireDefault(require("./compose"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var fontFamily = (0, _style.default)({
+  prop: 'fontFamily',
+  themeKey: 'typography'
+});
+exports.fontFamily = fontFamily;
+var fontSize = (0, _style.default)({
+  prop: 'fontSize',
+  themeKey: 'typography'
+});
+exports.fontSize = fontSize;
+var fontStyle = (0, _style.default)({
+  prop: 'fontStyle',
+  themeKey: 'typography'
+});
+exports.fontStyle = fontStyle;
+var fontWeight = (0, _style.default)({
+  prop: 'fontWeight',
+  themeKey: 'typography'
+});
+exports.fontWeight = fontWeight;
+var letterSpacing = (0, _style.default)({
+  prop: 'letterSpacing'
+});
+exports.letterSpacing = letterSpacing;
+var lineHeight = (0, _style.default)({
+  prop: 'lineHeight'
+});
+exports.lineHeight = lineHeight;
+var textAlign = (0, _style.default)({
+  prop: 'textAlign'
+});
+exports.textAlign = textAlign;
+var typography = (0, _compose.default)(fontFamily, fontSize, fontStyle, fontWeight, letterSpacing, lineHeight, textAlign);
+var _default = typography;
+exports.default = _default;
+},{"./style":"../node_modules/@material-ui/system/esm/style.js","./compose":"../node_modules/@material-ui/system/esm/compose.js"}],"../node_modules/@material-ui/system/esm/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var _exportNames = {
+  borders: true,
+  breakpoints: true,
+  compose: true,
+  css: true,
+  display: true,
+  flexbox: true,
+  palette: true,
+  positions: true,
+  shadows: true,
+  sizing: true,
+  spacing: true,
+  style: true,
+  typography: true
+};
+Object.defineProperty(exports, "borders", {
+  enumerable: true,
+  get: function () {
+    return _borders.default;
+  }
+});
+Object.defineProperty(exports, "breakpoints", {
+  enumerable: true,
+  get: function () {
+    return _breakpoints.default;
+  }
+});
+Object.defineProperty(exports, "compose", {
+  enumerable: true,
+  get: function () {
+    return _compose.default;
+  }
+});
+Object.defineProperty(exports, "css", {
+  enumerable: true,
+  get: function () {
+    return _css.default;
+  }
+});
+Object.defineProperty(exports, "display", {
+  enumerable: true,
+  get: function () {
+    return _display.default;
+  }
+});
+Object.defineProperty(exports, "flexbox", {
+  enumerable: true,
+  get: function () {
+    return _flexbox.default;
+  }
+});
+Object.defineProperty(exports, "palette", {
+  enumerable: true,
+  get: function () {
+    return _palette.default;
+  }
+});
+Object.defineProperty(exports, "positions", {
+  enumerable: true,
+  get: function () {
+    return _positions.default;
+  }
+});
+Object.defineProperty(exports, "shadows", {
+  enumerable: true,
+  get: function () {
+    return _shadows.default;
+  }
+});
+Object.defineProperty(exports, "sizing", {
+  enumerable: true,
+  get: function () {
+    return _sizing.default;
+  }
+});
+Object.defineProperty(exports, "spacing", {
+  enumerable: true,
+  get: function () {
+    return _spacing.default;
+  }
+});
+Object.defineProperty(exports, "style", {
+  enumerable: true,
+  get: function () {
+    return _style.default;
+  }
+});
+Object.defineProperty(exports, "typography", {
+  enumerable: true,
+  get: function () {
+    return _typography.default;
+  }
+});
+
+var _borders = _interopRequireWildcard(require("./borders"));
+
+Object.keys(_borders).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _borders[key];
+    }
+  });
+});
+
+var _breakpoints = _interopRequireDefault(require("./breakpoints"));
+
+var _compose = _interopRequireDefault(require("./compose"));
+
+var _css = _interopRequireDefault(require("./css"));
+
+var _display = _interopRequireDefault(require("./display"));
+
+var _flexbox = _interopRequireWildcard(require("./flexbox"));
+
+Object.keys(_flexbox).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _flexbox[key];
+    }
+  });
+});
+
+var _palette = _interopRequireWildcard(require("./palette"));
+
+Object.keys(_palette).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _palette[key];
+    }
+  });
+});
+
+var _positions = _interopRequireWildcard(require("./positions"));
+
+Object.keys(_positions).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _positions[key];
+    }
+  });
+});
+
+var _shadows = _interopRequireDefault(require("./shadows"));
+
+var _sizing = _interopRequireWildcard(require("./sizing"));
+
+Object.keys(_sizing).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _sizing[key];
+    }
+  });
+});
+
+var _spacing = _interopRequireDefault(require("./spacing"));
+
+var _style = _interopRequireDefault(require("./style"));
+
+var _typography = _interopRequireWildcard(require("./typography"));
+
+Object.keys(_typography).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _typography[key];
+    }
+  });
+});
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+},{"./borders":"../node_modules/@material-ui/system/esm/borders.js","./breakpoints":"../node_modules/@material-ui/system/esm/breakpoints.js","./compose":"../node_modules/@material-ui/system/esm/compose.js","./css":"../node_modules/@material-ui/system/esm/css.js","./display":"../node_modules/@material-ui/system/esm/display.js","./flexbox":"../node_modules/@material-ui/system/esm/flexbox.js","./palette":"../node_modules/@material-ui/system/esm/palette.js","./positions":"../node_modules/@material-ui/system/esm/positions.js","./shadows":"../node_modules/@material-ui/system/esm/shadows.js","./sizing":"../node_modules/@material-ui/system/esm/sizing.js","./spacing":"../node_modules/@material-ui/system/esm/spacing.js","./style":"../node_modules/@material-ui/system/esm/style.js","./typography":"../node_modules/@material-ui/system/esm/typography.js"}],"../node_modules/@material-ui/core/esm/Box/Box.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.styleFunction = void 0;
+
+var _system = require("@material-ui/system");
+
+var _styled = _interopRequireDefault(require("../styles/styled"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var styleFunction = (0, _system.css)((0, _system.compose)(_system.borders, _system.display, _system.flexbox, _system.positions, _system.palette, _system.shadows, _system.sizing, _system.spacing, _system.typography));
+/**
+ * @ignore - do not document.
+ */
+
+exports.styleFunction = styleFunction;
+var Box = (0, _styled.default)('div')(styleFunction, {
+  name: 'MuiBox'
+});
+var _default = Box;
+exports.default = _default;
+},{"@material-ui/system":"../node_modules/@material-ui/system/esm/index.js","../styles/styled":"../node_modules/@material-ui/core/esm/styles/styled.js"}],"../node_modules/@material-ui/core/esm/Box/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "default", {
+  enumerable: true,
+  get: function () {
+    return _Box.default;
+  }
+});
+Object.defineProperty(exports, "styleFunction", {
+  enumerable: true,
+  get: function () {
+    return _Box.styleFunction;
+  }
+});
+
+var _Box = _interopRequireWildcard(require("./Box"));
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+},{"./Box":"../node_modules/@material-ui/core/esm/Box/Box.js"}],"../src/index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -44263,6 +45583,10 @@ var _react = _interopRequireDefault(require("react"));
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
 var _SocialCards = _interopRequireDefault(require("./components/SocialCards"));
+
+var _Typography = _interopRequireDefault(require("@material-ui/core/Typography"));
+
+var _Box = _interopRequireDefault(require("@material-ui/core/Box"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -44298,7 +45622,27 @@ function (_React$Component) {
   _createClass(SocialCard, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", null, _react.default.createElement(_SocialCards.default, null));
+      return _react.default.createElement("div", {
+        className: "CardContainer"
+      }, _react.default.createElement(_Box.default, {
+        className: "TitleContainer",
+        borderRadius: 10,
+        bgcolor: "primary.main",
+        color: "primary.contrastText",
+        p: 1,
+        m: 1
+      }, _react.default.createElement(_Typography.default, {
+        className: "AppTitle",
+        variant: "h6",
+        component: "h6",
+        gutterBottom: "false"
+      }, "REACT WEEKLY PRACTICE PROJECT"), _react.default.createElement(_Typography.default, {
+        className: "AppTitle",
+        variant: "h2",
+        component: "h2",
+        gutterBottom: "false",
+        mb: 0
+      }, "Social Cards")), _react.default.createElement(_SocialCards.default, null));
     }
   }]);
 
@@ -44308,7 +45652,7 @@ function (_React$Component) {
 var App = document.getElementById('app');
 
 _reactDom.default.render(_react.default.createElement(SocialCard, null), App);
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./components/SocialCards":"../src/components/SocialCards.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./components/SocialCards":"../src/components/SocialCards.js","@material-ui/core/Typography":"../node_modules/@material-ui/core/esm/Typography/index.js","@material-ui/core/Box":"../node_modules/@material-ui/core/esm/Box/index.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
