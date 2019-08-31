@@ -44428,7 +44428,7 @@ Object.defineProperty(exports, "default", {
 var _Typography = _interopRequireDefault(require("./Typography"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./Typography":"../node_modules/@material-ui/core/esm/Typography/Typography.js"}],"../src/components/data/data.js":[function(require,module,exports) {
+},{"./Typography":"../node_modules/@material-ui/core/esm/Typography/Typography.js"}],"components/data/data.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -44525,7 +44525,7 @@ var SocialCards = function SocialCards() {
 
 var _default = SocialCards;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","@material-ui/core/styles":"../node_modules/@material-ui/core/esm/styles/index.js","@material-ui/core/Card":"../node_modules/@material-ui/core/esm/Card/index.js","@material-ui/core/CardActionArea":"../node_modules/@material-ui/core/esm/CardActionArea/index.js","@material-ui/core/CardActions":"../node_modules/@material-ui/core/esm/CardActions/index.js","@material-ui/core/CardContent":"../node_modules/@material-ui/core/esm/CardContent/index.js","@material-ui/core/CardMedia":"../node_modules/@material-ui/core/esm/CardMedia/index.js","@material-ui/core/Button":"../node_modules/@material-ui/core/esm/Button/index.js","@material-ui/core/Typography":"../node_modules/@material-ui/core/esm/Typography/index.js","./data/data":"../src/components/data/data.js"}],"../node_modules/@material-ui/system/node_modules/@babel/runtime/helpers/esm/defineProperty.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","@material-ui/core/styles":"../node_modules/@material-ui/core/esm/styles/index.js","@material-ui/core/Card":"../node_modules/@material-ui/core/esm/Card/index.js","@material-ui/core/CardActionArea":"../node_modules/@material-ui/core/esm/CardActionArea/index.js","@material-ui/core/CardActions":"../node_modules/@material-ui/core/esm/CardActions/index.js","@material-ui/core/CardContent":"../node_modules/@material-ui/core/esm/CardContent/index.js","@material-ui/core/CardMedia":"../node_modules/@material-ui/core/esm/CardMedia/index.js","@material-ui/core/Button":"../node_modules/@material-ui/core/esm/Button/index.js","@material-ui/core/Typography":"../node_modules/@material-ui/core/esm/Typography/index.js","./data/data":"components/data/data.js"}],"../node_modules/@material-ui/system/node_modules/@babel/runtime/helpers/esm/defineProperty.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -45845,7 +45845,104 @@ Object.defineProperty(exports, "styleFunction", {
 var _Box = _interopRequireWildcard(require("./Box"));
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
-},{"./Box":"../node_modules/@material-ui/core/esm/Box/Box.js"}],"../src/index.js":[function(require,module,exports) {
+},{"./Box":"../node_modules/@material-ui/core/esm/Box/Box.js"}],"../src/components/data/FetchData.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var FetchData =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(FetchData, _React$Component);
+
+  function FetchData(props) {
+    var _this;
+
+    _classCallCheck(this, FetchData);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(FetchData).call(this, props));
+    _this.state = {
+      isFetching: false,
+      users: []
+    };
+    return _this;
+  }
+
+  _createClass(FetchData, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      fetch('https://jsonplaceholder.typicode.com/users').then(function (res) {
+        return res.json();
+      }).then(function (result) {
+        console.log(result.users);
+
+        _this2.setState({
+          isFetching: true,
+          users: result
+        });
+      }, function (error) {
+        _this2.setState({
+          isFetching: true,
+          error: error
+        });
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$state = this.state,
+          error = _this$state.error,
+          isFetching = _this$state.isFetching,
+          users = _this$state.users;
+      console.log(_typeof(users));
+
+      if (error) {
+        return _react.default.createElement("div", null, "Error: ", error.message);
+      } else if (!isFetching) {
+        return _react.default.createElement("div", null, "Loading...");
+      } else {
+        return _react.default.createElement("ul", null, users.map(function (user) {
+          return _react.default.createElement("li", {
+            key: user.id
+          }, user.name);
+        }));
+      }
+    }
+  }]);
+
+  return FetchData;
+}(_react.default.Component);
+
+var _default = FetchData;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"../src/index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -45857,6 +45954,8 @@ var _SocialCards = _interopRequireDefault(require("./components/SocialCards"));
 var _Typography = _interopRequireDefault(require("@material-ui/core/Typography"));
 
 var _Box = _interopRequireDefault(require("@material-ui/core/Box"));
+
+var _FetchData = _interopRequireDefault(require("./components/data/FetchData"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45912,7 +46011,7 @@ function (_React$Component) {
         component: "h2",
         gutterBottom: "false",
         mb: 0
-      }, "Social Cards")), _react.default.createElement(_SocialCards.default, null));
+      }, "Social Cards")), _react.default.createElement(_SocialCards.default, null), _react.default.createElement(_FetchData.default, null));
     }
   }]);
 
@@ -45922,7 +46021,7 @@ function (_React$Component) {
 var App = document.getElementById('app');
 
 _reactDom.default.render(_react.default.createElement(SocialCard, null), App);
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./components/SocialCards":"../src/components/SocialCards.js","@material-ui/core/Typography":"../node_modules/@material-ui/core/esm/Typography/index.js","@material-ui/core/Box":"../node_modules/@material-ui/core/esm/Box/index.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./components/SocialCards":"../src/components/SocialCards.js","@material-ui/core/Typography":"../node_modules/@material-ui/core/esm/Typography/index.js","@material-ui/core/Box":"../node_modules/@material-ui/core/esm/Box/index.js","./components/data/FetchData":"../src/components/data/FetchData.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -45950,7 +46049,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51053" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52660" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

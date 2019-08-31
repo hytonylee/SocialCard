@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import SocialCards from './components/SocialCards';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import FetchingData from './components/data/FetchData'
+
 
 class SocialCard extends React.Component {
     render() {
@@ -17,6 +19,7 @@ class SocialCard extends React.Component {
                     </Typography>
                 </Box>
                 <SocialCards />
+                <FetchingData />
             </div>
         )
     }
