@@ -7,50 +7,80 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import { data } from './data/data';
 
-const useStyles = makeStyles({
-    card: {
-        minWidth: '334px',
-        maxWidth: 500,
-        marginBottom: '10px',
-    },
-    bullet: {
-        display: 'inline-block',
-        margin: '0 2px',
-        transform: 'scale(0.8)',
-    },
-    author: {
-        fontSize: 14,
-    },
-})
 
-const SocialCards = () => {
-    const classes = useStyles();
-    let cards = data.map((data) =>
-        <Card className={classes.card} keys={data.id}>
-            <CardContent>
-                <Typography className={classes.author} color="textSecondary" gutterBottom>
-                    {data.author}
-                </Typography>
-                <Typography variant="h5" component="h2">
-                    {data.title}
-                </Typography>
-                <Typography variant="body2" component="p">
-                    {data.desc}
-                </Typography>
-            </CardContent>
-            <CardActions>
-                <Button size="small">Learn More</Button>
-            </CardActions>
-        </Card>
-    )
 
-    return (
-        <div>
-            {cards}
-        </div>
-    );
+class SocialCards extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            isFetching: false,
+            photos: []
+        }
+    }
+
+    componentDidMount() {
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(res => res.json())
+            .then(
+                (result) => {
+                    this.setState({
+                        isFetching: true,
+                        users: result
+                    })
+                },
+                (error) => {
+                    this.setState({
+                        isFetching: true,
+                        error
+                    })
+                }
+            )
+    }
+
+    render() {
+        const { error, isFetching, users } = this.state
+        if (error) {
+            return <div>Error: {error.message}</div>;
+        } else if (!isFetching) {
+            return <div>Loading...</div>;
+        } else {
+            return (
+                <div style={{ background: 'none' }}>
+                    {users.map(user => (
+                        <Card key={user.id} style={{ marginBottom: '10px' }}>
+                            <CardActionArea>
+                                {/* <CardMedia
+                                    component="img"
+                                    alt="Contemplative Reptile"
+                                    height="140"
+                                    image=""
+                                    title="Contemplative Reptile"
+                                /> */}
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="h2">
+                                        {user.name}
+                                    </Typography>
+                                    <Typography variant="body2" color="textSecondary" component="p">
+                                        {user.email}
+                                    </Typography>
+                                </CardContent>
+                            </CardActionArea>
+                            <CardActions>
+                                <Button size="small" color="primary">
+                                    Share
+                        </Button>
+                                <Button size="small" color="primary">
+                                    Learn More
+                        </Button>
+                            </CardActions>
+                        </Card>
+                    ))
+                    }
+                </div >
+            );
+        }
+    }
 }
 
 export default SocialCards;

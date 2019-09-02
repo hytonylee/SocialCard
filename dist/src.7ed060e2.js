@@ -44428,31 +44428,7 @@ Object.defineProperty(exports, "default", {
 var _Typography = _interopRequireDefault(require("./Typography"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./Typography":"../node_modules/@material-ui/core/esm/Typography/Typography.js"}],"components/data/data.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.data = void 0;
-var data = [{
-  id: 1,
-  title: 'Lord of the Flies',
-  author: 'William Golding',
-  desc: 'Golding’s compelling story about a group of very ordinary boys marooned on a coral island is a classic. At first it seems as though it is all going to be great fun; but the fun soon becomes serious and life on the island turns into a nightmare of panic and death. As ordinary standards of behavior collapse, the whole world the boys know collapses with them — the world of cricket and homework and adventure stories — and another world is revealed beneath, primitive and terrible. Published in 1954, the novel has labeled a parable, an allegory, a myth, a morality tale, a parody, a political treatise, even a vision of the apocalypse.'
-}, {
-  id: 2,
-  title: 'Heart of the Darkness',
-  author: 'Joseph Conrad',
-  desc: 'A narrated voyage up the Congo River into the Congo Free State in the so-called Heart of Africa. Charles Marlow, the narrator, tells his story to friends aboard a boat anchored on the River Thames.'
-}, {
-  id: 3,
-  title: 'Slaughterhouse-Five',
-  author: 'Kurt Vonnegut',
-  desc: "It follows his time as an American soldier and chaplain's assistant, to postwar and early years—occasionally traveling through time itself.The text centers around Pilgrim's survival of the Allies' firebombing of Dresden as a prisoner- of - war, an event which Vonnegut himself lived through as a captured serviceman."
-}];
-exports.data = data;
-},{}],"../src/components/SocialCards.js":[function(require,module,exports) {
+},{"./Typography":"../node_modules/@material-ui/core/esm/Typography/Typography.js"}],"../src/components/SocialCards.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -44478,54 +44454,112 @@ var _Button = _interopRequireDefault(require("@material-ui/core/Button"));
 
 var _Typography = _interopRequireDefault(require("@material-ui/core/Typography"));
 
-var _data = require("./data/data");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var useStyles = (0, _styles.makeStyles)({
-  card: {
-    minWidth: '334px',
-    maxWidth: 500,
-    marginBottom: '10px'
-  },
-  bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)'
-  },
-  author: {
-    fontSize: 14
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var SocialCards =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(SocialCards, _React$Component);
+
+  function SocialCards(props) {
+    var _this;
+
+    _classCallCheck(this, SocialCards);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(SocialCards).call(this, props));
+    _this.state = {
+      isFetching: false,
+      photos: []
+    };
+    return _this;
   }
-});
 
-var SocialCards = function SocialCards() {
-  var classes = useStyles();
+  _createClass(SocialCards, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
 
-  var cards = _data.data.map(function (data) {
-    return _react.default.createElement(_Card.default, {
-      className: classes.card,
-      keys: data.id
-    }, _react.default.createElement(_CardContent.default, null, _react.default.createElement(_Typography.default, {
-      className: classes.author,
-      color: "textSecondary",
-      gutterBottom: true
-    }, data.author), _react.default.createElement(_Typography.default, {
-      variant: "h5",
-      component: "h2"
-    }, data.title), _react.default.createElement(_Typography.default, {
-      variant: "body2",
-      component: "p"
-    }, data.desc)), _react.default.createElement(_CardActions.default, null, _react.default.createElement(_Button.default, {
-      size: "small"
-    }, "Learn More")));
-  });
+      fetch('https://jsonplaceholder.typicode.com/users').then(function (res) {
+        return res.json();
+      }).then(function (result) {
+        _this2.setState({
+          isFetching: true,
+          users: result
+        });
+      }, function (error) {
+        _this2.setState({
+          isFetching: true,
+          error: error
+        });
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$state = this.state,
+          error = _this$state.error,
+          isFetching = _this$state.isFetching,
+          users = _this$state.users;
 
-  return _react.default.createElement("div", null, cards);
-};
+      if (error) {
+        return _react.default.createElement("div", null, "Error: ", error.message);
+      } else if (!isFetching) {
+        return _react.default.createElement("div", null, "Loading...");
+      } else {
+        return _react.default.createElement("div", {
+          style: {
+            background: 'none'
+          }
+        }, users.map(function (user) {
+          return _react.default.createElement(_Card.default, {
+            key: user.id,
+            style: {
+              marginBottom: '10px'
+            }
+          }, _react.default.createElement(_CardActionArea.default, null, _react.default.createElement(_CardContent.default, null, _react.default.createElement(_Typography.default, {
+            gutterBottom: true,
+            variant: "h5",
+            component: "h2"
+          }, user.name), _react.default.createElement(_Typography.default, {
+            variant: "body2",
+            color: "textSecondary",
+            component: "p"
+          }, user.email))), _react.default.createElement(_CardActions.default, null, _react.default.createElement(_Button.default, {
+            size: "small",
+            color: "primary"
+          }, "Share"), _react.default.createElement(_Button.default, {
+            size: "small",
+            color: "primary"
+          }, "Learn More")));
+        }));
+      }
+    }
+  }]);
+
+  return SocialCards;
+}(_react.default.Component);
 
 var _default = SocialCards;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","@material-ui/core/styles":"../node_modules/@material-ui/core/esm/styles/index.js","@material-ui/core/Card":"../node_modules/@material-ui/core/esm/Card/index.js","@material-ui/core/CardActionArea":"../node_modules/@material-ui/core/esm/CardActionArea/index.js","@material-ui/core/CardActions":"../node_modules/@material-ui/core/esm/CardActions/index.js","@material-ui/core/CardContent":"../node_modules/@material-ui/core/esm/CardContent/index.js","@material-ui/core/CardMedia":"../node_modules/@material-ui/core/esm/CardMedia/index.js","@material-ui/core/Button":"../node_modules/@material-ui/core/esm/Button/index.js","@material-ui/core/Typography":"../node_modules/@material-ui/core/esm/Typography/index.js","./data/data":"components/data/data.js"}],"../node_modules/@material-ui/system/node_modules/@babel/runtime/helpers/esm/defineProperty.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","@material-ui/core/styles":"../node_modules/@material-ui/core/esm/styles/index.js","@material-ui/core/Card":"../node_modules/@material-ui/core/esm/Card/index.js","@material-ui/core/CardActionArea":"../node_modules/@material-ui/core/esm/CardActionArea/index.js","@material-ui/core/CardActions":"../node_modules/@material-ui/core/esm/CardActions/index.js","@material-ui/core/CardContent":"../node_modules/@material-ui/core/esm/CardContent/index.js","@material-ui/core/CardMedia":"../node_modules/@material-ui/core/esm/CardMedia/index.js","@material-ui/core/Button":"../node_modules/@material-ui/core/esm/Button/index.js","@material-ui/core/Typography":"../node_modules/@material-ui/core/esm/Typography/index.js"}],"../node_modules/@material-ui/system/node_modules/@babel/runtime/helpers/esm/defineProperty.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -45845,7 +45879,9 @@ Object.defineProperty(exports, "styleFunction", {
 var _Box = _interopRequireWildcard(require("./Box"));
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
-},{"./Box":"../node_modules/@material-ui/core/esm/Box/Box.js"}],"../src/components/data/FetchData.js":[function(require,module,exports) {
+},{"./Box":"../node_modules/@material-ui/core/esm/Box/Box.js"}],"../node_modules/parcel-bundler/src/builtins/_empty.js":[function(require,module,exports) {
+
+},{}],"../src/components/HigherOrderComponent.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -45854,6 +45890,16 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+var _styles = require("@material-ui/styles");
+
+var _Card = _interopRequireDefault(require("@material-ui/core/Card"));
+
+var _SocialCards = _interopRequireDefault(require("./SocialCards"));
+
+var _dns = require("dns");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45875,74 +45921,46 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var FetchData =
+var styles = function styles(theme) {
+  return {
+    card: {
+      width: 492
+    }
+  };
+};
+
+var HigherOrderComponent =
 /*#__PURE__*/
 function (_React$Component) {
-  _inherits(FetchData, _React$Component);
+  _inherits(HigherOrderComponent, _React$Component);
 
-  function FetchData(props) {
-    var _this;
+  function HigherOrderComponent() {
+    _classCallCheck(this, HigherOrderComponent);
 
-    _classCallCheck(this, FetchData);
-
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(FetchData).call(this, props));
-    _this.state = {
-      isFetching: false,
-      users: []
-    };
-    return _this;
+    return _possibleConstructorReturn(this, _getPrototypeOf(HigherOrderComponent).apply(this, arguments));
   }
 
-  _createClass(FetchData, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      var _this2 = this;
-
-      fetch('https://jsonplaceholder.typicode.com/users').then(function (res) {
-        return res.json();
-      }).then(function (result) {
-        console.log(result.users);
-
-        _this2.setState({
-          isFetching: true,
-          users: result
-        });
-      }, function (error) {
-        _this2.setState({
-          isFetching: true,
-          error: error
-        });
-      });
-    }
-  }, {
+  _createClass(HigherOrderComponent, [{
     key: "render",
     value: function render() {
-      var _this$state = this.state,
-          error = _this$state.error,
-          isFetching = _this$state.isFetching,
-          users = _this$state.users;
-      console.log(_typeof(users));
-
-      if (error) {
-        return _react.default.createElement("div", null, "Error: ", error.message);
-      } else if (!isFetching) {
-        return _react.default.createElement("div", null, "Loading...");
-      } else {
-        return _react.default.createElement("ul", null, users.map(function (user) {
-          return _react.default.createElement("li", {
-            key: user.id
-          }, user.name);
-        }));
-      }
+      var classes = this.props.classes;
+      return _react.default.createElement(_Card.default, {
+        className: classes.card
+      }, _react.default.createElement(_SocialCards.default, null));
     }
   }]);
 
-  return FetchData;
+  return HigherOrderComponent;
 }(_react.default.Component);
 
-var _default = FetchData;
+HigherOrderComponent.propTypes = {
+  classes: _propTypes.default.object.isRequired
+};
+
+var _default = (0, _styles.withStyles)(styles)(HigherOrderComponent);
+
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"../src/index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","@material-ui/styles":"../node_modules/@material-ui/styles/esm/index.js","@material-ui/core/Card":"../node_modules/@material-ui/core/esm/Card/index.js","./SocialCards":"../src/components/SocialCards.js","dns":"../node_modules/parcel-bundler/src/builtins/_empty.js"}],"../src/index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -45955,7 +45973,7 @@ var _Typography = _interopRequireDefault(require("@material-ui/core/Typography")
 
 var _Box = _interopRequireDefault(require("@material-ui/core/Box"));
 
-var _FetchData = _interopRequireDefault(require("./components/data/FetchData"));
+var _HigherOrderComponent = _interopRequireDefault(require("./components/HigherOrderComponent"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -46003,15 +46021,13 @@ function (_React$Component) {
       }, _react.default.createElement(_Typography.default, {
         className: "AppTitle",
         variant: "h6",
-        component: "h6",
-        gutterBottom: "false"
+        component: "h6"
       }, "REACT WEEKLY PRACTICE PROJECT"), _react.default.createElement(_Typography.default, {
         className: "AppTitle",
         variant: "h2",
         component: "h2",
-        gutterBottom: "false",
         mb: 0
-      }, "Social Cards")), _react.default.createElement(_SocialCards.default, null), _react.default.createElement(_FetchData.default, null));
+      }, "Social Cards")), _react.default.createElement(_HigherOrderComponent.default, null));
     }
   }]);
 
@@ -46021,7 +46037,7 @@ function (_React$Component) {
 var App = document.getElementById('app');
 
 _reactDom.default.render(_react.default.createElement(SocialCard, null), App);
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./components/SocialCards":"../src/components/SocialCards.js","@material-ui/core/Typography":"../node_modules/@material-ui/core/esm/Typography/index.js","@material-ui/core/Box":"../node_modules/@material-ui/core/esm/Box/index.js","./components/data/FetchData":"../src/components/data/FetchData.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./components/SocialCards":"../src/components/SocialCards.js","@material-ui/core/Typography":"../node_modules/@material-ui/core/esm/Typography/index.js","@material-ui/core/Box":"../node_modules/@material-ui/core/esm/Box/index.js","./components/HigherOrderComponent":"../src/components/HigherOrderComponent.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
