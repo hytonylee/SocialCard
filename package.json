@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "React Practice weekly build",
   "main": "index.js",
+  "homepage": "https://hytonylee.github.io/SocialCard/",
   "scripts": {
     "start": "parcel public/index.html",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build public/index.html",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [
     "React",
@@ -17,6 +21,7 @@
   "dependencies": {
     "@material-ui/core": "^4.3.3",
     "@material-ui/icons": "^4.2.1",
+    "gh-pages": "^2.1.1",
     "npm-check-updates": "^3.1.21",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
