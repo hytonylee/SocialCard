@@ -46022,7 +46022,7 @@ function (_React$Component) {
         className: "AppTitle",
         variant: "h6",
         component: "h6"
-      }, "REACT WEEKLY PRACTICE PROJECT"), _react.default.createElement(_Typography.default, {
+      }, "WEEKLY PROJECT"), _react.default.createElement(_Typography.default, {
         className: "AppTitle",
         variant: "h2",
         component: "h2",
@@ -46065,7 +46065,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52660" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50369" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
