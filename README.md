@@ -1,3 +1,6 @@
+<h3>Weekly Build</h3>
+<h1>Social Card</h1>
+
 <b>Background</b><br/>
 Based on the recommendation from https://daveceddia.com/react-practice-projects/, the purpose of this app is to practice
 building web application in React, component by component. 
