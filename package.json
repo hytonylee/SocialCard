@@ -25,7 +25,7 @@
     "npm-check-updates": "^3.1.21",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "serialize-to-js": "^3.0.0"
+    "serialize-to-js": "^3.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
